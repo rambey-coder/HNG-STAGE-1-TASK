@@ -1,8 +1,12 @@
 import React from 'react'
+import Header from './Header'
+import Footer from './Footer'
 
 const MainPage = () => {
   return (
     <>
+      <Header />
+
     <div className="links">
         <a href="">Twitter Link</a>
         <a href="">Zuri Team</a>
@@ -21,6 +25,8 @@ const MainPage = () => {
           <img src="/assets/github-icon.svg" alt="github" />
         </a>
       </div>
+
+      <Footer />
       </>
   )
 }

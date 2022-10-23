@@ -1,17 +1,18 @@
 import './App.css';
-import Header from './Components/Header';
 import Links from './Components/Links'
-import Footer from './Components/Footer';
 import Error from './Components/Error';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 function App() {
   return (
+    <Router>
      <div className="container">
-      {/* <Header />
-      <Links />
-      <Footer /> */}
-      <Error />
+    <Routes>
+      <Route path='/' element={<Links />} />
+      <Route path='*' element={<Error />} />
+     </Routes>
      </div>
+     </Router>
   );
 }
 
