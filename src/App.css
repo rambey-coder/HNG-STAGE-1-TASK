@@ -36,8 +36,16 @@
   right: 0;
 }
 
+.share {
+  display: block;
+}
+
+.menu {
+  display: none;
+}
+
 .links{
-  margin-top: 2.5rem;
+  margin: 2.5rem 0;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -57,7 +65,7 @@
 }
 
 .account {
-  margin-top: 2.5rem;
+  /* margin-top: 2.5rem; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,4 +98,22 @@
   color: #667085;
   font-size: 14px;
   font-weight: 600;
+}
+
+@media screen and (max-width: 774px) {
+  .account, .footer {
+    display: none;
+  }
+
+  .header > span:nth-child(2) {
+    border: 1px dotted #D0D5DD;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .share {
+    display: none;
+  }
 }

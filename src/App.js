@@ -9,7 +9,8 @@ function App() {
         <p>Annette Black</p>
       </span>
         <span>
-          <img src="/assets/share-icon.svg" alt="share" />
+          <img src="/assets/share-icon.svg" alt="share" className='share'/>
+          <img src="/assets/menu-icon.svg" alt="menu" className='menu'/>
         </span>
       </div>
 
