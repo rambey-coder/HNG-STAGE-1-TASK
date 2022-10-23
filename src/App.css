@@ -151,9 +151,6 @@
   text-decoration: none;
   color: #fff;
   font-size: 13px;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
   border: 1px solid transparent;
   background: #5925DC;
   border-radius: 4px;
@@ -187,4 +184,23 @@
   .share {
     display: none;
   }
+
+  .error-link {
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 100%;
+  }
+
+  .error-container > h1 {
+    font-size: 40px;
+  }
+
+  .error-link > a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .error-link > a:nth-child(1) {
+    justify-content: center;
+  }  
 }
