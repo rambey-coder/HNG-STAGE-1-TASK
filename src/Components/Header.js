@@ -5,7 +5,7 @@ const Header = () => {
     <div className="header">
       <span>
         <img src="/assets/profile__img.png" alt="profile_img" id="profile_img" />
-        <p>Annette Black</p>
+        <p id='twitter'>Rambeybello</p>
       </span>
         <span>
           <img src="/assets/share-icon.svg" alt="share" className='share'/>
