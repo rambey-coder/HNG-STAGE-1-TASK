@@ -7,10 +7,9 @@ import Error from './Components/Error';
 function App() {
   return (
      <div className="container">
-      {/* <Header />
+      <Header />
       <Links />
-      <Footer /> */}
-      <Error />
+      <Footer />
      </div>
   );
 }

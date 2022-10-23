@@ -100,6 +100,77 @@
   font-weight: 600;
 }
 
+.error {
+  height: 67vh;
+  display: flex;
+  align-items: center;
+}
+
+.error-container > p:nth-child(1) {
+  color: #5925DC;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.error-container > h1 {
+  color: #101828;
+  font-size: 60px;
+  margin: 1rem 0;
+}
+
+.error-container > p:nth-child(3) {
+  color: #475467;
+}
+
+.error-link {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.error-link > a:nth-child(1) {
+  text-decoration: none;
+  color: #344054;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid #D0D5DD;
+  border-radius: 4px;
+  padding: 15px 20px;
+  transition: all .7s ease;
+}
+
+.error-link > a:nth-child(1):hover {
+  border: 1px solid #5925DC;
+  color: #5925DC;
+}
+
+.error-link > a:nth-child(2) {
+  text-decoration: none;
+  color: #fff;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid transparent;
+  background: #5925DC;
+  border-radius: 4px;
+  padding: 15px 20px;
+  transition: all .7s ease;
+}
+
+.error-link > a:nth-child(2):hover {
+  background: transparent;
+  color: #5925DC;
+  border: 1px solid #5925DC;
+}
+
+.error-link > a:nth-child(1) > img {
+  width: 13px;
+}
+
 @media screen and (max-width: 774px) {
   .account, .footer {
     display: none;
