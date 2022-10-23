@@ -1,7 +1,9 @@
 import React from 'react'
 import Footer from './Footer'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Error = () => {
+    const navigate = useNavigate()
   return (
     <>
     <div className="error">
@@ -10,12 +12,12 @@ const Error = () => {
         <h1>We can’t find that page</h1>
         <p>Sorry, the page you are looking for doesn't exist.</p>
         <div className="error-link">
-            <a href="">
+            <Link onClick={() => navigate(-1)}>
                 <img src="/assets/back-icon.svg" alt="back" />
                 Go back
-            </a>
+            </Link>
 
-            <a href="">Take me home</a>
+            <Link to="/">Take me home</Link>
         </div>
         </div>
     </div>
