@@ -4,12 +4,17 @@
 }
 
 .header {
+  position: relative;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: center;
   max-width: 500px;
   margin: auto;
   padding-top: 2.5rem;
+}
+
+.header > span:nth-child(1) {
+  width: 100%;
+  text-align: center;
 }
 
 .header > span:nth-child(1) > p {
@@ -26,6 +31,9 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  position: absolute;
+  top: 40px;
+  right: 0;
 }
 
 .links{
@@ -33,14 +41,14 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 
 .links > a {
   background: #EAECF0;
   width: 100%;
   text-align: center;
-  padding: 18px;
+  padding: 20px;
   border-radius: 4px;
   color: #000;
   text-decoration: none;
@@ -65,7 +73,7 @@
 }
 
 .footer {
-  margin-top: 3rem;
+  margin-top: 8rem;
   border-top: 1px solid #EAECF0;
   padding: 20px 0;
   display: flex;
