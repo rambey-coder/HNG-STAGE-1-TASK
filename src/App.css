@@ -12,9 +12,53 @@
   padding-top: 2.5rem;
 }
 
-.header > span:nth-child(1) {
+.header > div {
   width: 100%;
   text-align: center;
+} 
+
+.profile-container {
+  position: relative;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+}
+
+.profile-container > img:nth-child(1) {
+  width: 100%;
+}
+
+.profile-container > img:nth-child(2) {
+  position: absolute;
+  z-index: 99;
+  right: 0;
+  left: 40px;
+  bottom: 11px;
+  width: 25px;
+  display: none;
+  transition: all .5s ease;
+}
+
+.profile-container:hover .camera {
+  display: block;
+}
+
+.profile-container::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  top: 0;
+  border-radius: 50px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: all .5s ease;
+}
+
+.profile-container:hover.profile-container::after {
+  background: #344054BF;
 }
 
 .header > span:nth-child(1) > p {
@@ -23,7 +67,7 @@
 }
 
 .header > span:nth-child(2) {
-  border: 1px solid #D0D5DD;
+  border: 1px dashed #D0D5DD;
   width: 35px;
   height: 35px;
   border-radius: 50px;
@@ -34,6 +78,48 @@
   position: absolute;
   top: 40px;
   right: 0;
+  transition: all .6s ease;
+}
+
+.header > span:nth-child(2):hover {
+  background: #EAECF0;
+}
+
+.share-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.share-tooltip .tiptext {
+  visibility: hidden;
+  position: absolute;
+  margin: 0;
+  width: 77px;
+  font-size: 12px;
+  background-color: #101828;
+  filter: drop-shadow(1px 1px 8px #10182848);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  z-index: 1;
+  right: 50px;
+  transition: opacity 0.3s;
+}
+
+.share-tooltip .tiptext::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: -5px;
+  right: -21%;
+  border:10px solid #101828;
+  border-color: transparent transparent transparent #101828;
+}
+
+.share-tooltip:hover .tiptext {
+  visibility: visible;
 }
 
 .share {
@@ -176,10 +262,6 @@
 @media screen and (max-width: 774px) {
   .account, .footer {
     display: none;
-  }
-
-  .header > span:nth-child(2) {
-    border: 1px dotted #D0D5DD;
   }
 
   .menu {
