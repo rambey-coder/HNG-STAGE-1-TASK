@@ -61,8 +61,9 @@
   background: #344054BF;
 }
 
-.header > span:nth-child(1) > p {
+.header > div:nth-child(1) > p {
   font-weight: 700;
+  margin-bottom: 0;
   font-size: 16px;
 }
 
@@ -104,7 +105,7 @@
   padding: 8px 0;
   z-index: 1;
   right: 50px;
-  transition: opacity 0.3s;
+  transition: visibility 0.3s;
 }
 
 .share-tooltip .tiptext::after {
@@ -156,7 +157,6 @@
 }
 
 .account {
-  /* margin-top: 2.5rem; */
   display: flex;
   align-items: center;
   justify-content: center;
