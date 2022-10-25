@@ -9,6 +9,7 @@ const Header = () => {
         <img src="/assets/camera-icon.svg" className='camera' alt="camera" />
         </div>
         <p id='twitter'>Rambeybello</p>
+        <p id='slack'>Rambey</p>
       </div>
         <span className='share-tooltip'>
           <img src="/assets/share-icon.svg" alt="share" className='share'/>

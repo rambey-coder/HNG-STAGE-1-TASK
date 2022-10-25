@@ -61,10 +61,14 @@
   background: #344054BF;
 }
 
-.header > div:nth-child(1) > p {
+.header > div:nth-child(1) > p:nth-child(2) {
   font-weight: 700;
   margin-bottom: 0;
   font-size: 16px;
+}
+
+.header > div:nth-child(1) > p:nth-child(3) {
+  display: none;
 }
 
 .header > span:nth-child(2) {
