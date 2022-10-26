@@ -167,11 +167,8 @@
   gap: 1.5rem;
 }
 
-.account > a {
-  text-decoration: none;
-}
 
-.account > a > img {
+.account > img {
   width: 25px;
 }
 
