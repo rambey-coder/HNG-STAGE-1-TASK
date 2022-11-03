@@ -7,25 +7,26 @@ const Contact = () => {
         <div className='contact-container'>
             <h1>Contact Me</h1>
             <p>Hi there, contact me to ask me about anything you have in mind.</p>
-            <div className="contact">
+            <form className="contact">
                 <div className="contact-info">
-                      <span>
+                      <div>
                           <label>First name</label>
                           <input type="text" id="first_name" placeholder='First name'/>
-                      </span>
-                      <span>
+                      </div>
+                      <div>
                           <label>Last name</label>
                           <input type="text" id="last_name" placeholder='Last name'/>
-                      </span>
+                      </div>
                 </div>
 
-                <span>
+                <div>
                     <label>Email</label>
                     <input type="email" id="email" placeholder='yourname@email.com' />
-                </span>
-                <span>
+                </div>
+                <div>
+                    <label>Message</label>
                     <textarea placeholder="Send me a message and I'll reply you as soon as possible..." id="message"></textarea>
-                </span>
+                </div>
 
                 <div className="checkbox">
                     <input type="checkbox" name="" id="" />
@@ -33,7 +34,7 @@ const Contact = () => {
                 </div>
 
                 <button id='btn_submit'>Send message</button>
-            </div>
+            </form>
         </div>
         <Footer />
     </>

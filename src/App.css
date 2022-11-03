@@ -279,6 +279,38 @@
   margin-top: 0;
 }
 
+.contact {
+  margin-top: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact > div > label, .contact-info > div > label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #344054;
+}
+
+.contact-info > div, .contact > div {
+  width: 50%;
+}
+
+.contact > input, .contact-info > div > input {
+  width: 100%;
+  padding: 10px 20px;
+}
 @media screen and (max-width: 774px) {
   .footer {
     /* display: none; */
