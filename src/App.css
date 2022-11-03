@@ -1,4 +1,4 @@
-.container {
+.general-container {
   width: 70%;
   margin: auto;
 }
@@ -272,12 +272,12 @@
 .contact-container > h1 {
   color: #101828;
   font-weight: 700;
+  margin-bottom: 0;
 }
 
 .contact-container > p {
-  font-size: 17px;
+  font-size: 15px;
   color: #475467;
-  margin-top: 0;
 }
 
 .contact {
@@ -341,9 +341,96 @@
   font-size: 13px;
 }
 
+/* .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+} */
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #475467;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 17px;
+  width: 17px;
+  background-color: transparent;
+  border: 1px solid #D0D5DD;
+  border-radius: 5px;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: transparent;
+  border-color: #1570EF;
+  transition: all 0.5s ease;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 3px;
+  height: 10px;
+  border: solid #1570EF;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+#btn_submit {
+  display: inline-block;
+  background: #1570EF;
+  width: 100%;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 5px;
+  padding: 17px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+}
+
+#btn_submit:hover {
+  background: #045cd7;
+  transition: all .8s ease;
+}
+
 @media screen and (max-width: 774px) {
   .footer {
-    /* display: none; */
     flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
