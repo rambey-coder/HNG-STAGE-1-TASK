@@ -260,6 +260,15 @@
   width: 13px;
 }
 
+.contact-container {
+  width: 60%;
+  height: 67vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+}
+
 @media screen and (max-width: 774px) {
   .footer {
     /* display: none; */
