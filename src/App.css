@@ -338,7 +338,6 @@
 
 .contact > div:nth-child(3) > textarea.active {
   border-color: #F89687;
-  /* box-shadow: 0 0 0 4px rgb(255, 211, 204); */
 }
 
 .contact > div:nth-child(3) > textarea:focus.active {
@@ -387,7 +386,7 @@
   left: 0;
   height: 17px;
   width: 17px;
-  background-color: transparent;
+  background-color: #fff;
   border: 1px solid #D0D5DD;
   border-radius: 5px;
 }
@@ -436,6 +435,7 @@
   transition: all .8s ease;
 }
 
+
 @media screen and (max-width: 774px) {
   .footer {
     flex-direction: column;
@@ -483,9 +483,3 @@
   }
 
 }
-
-/* @media screen and (max-width: 584px) {
-  .contact-container {
-    width: 75%;
-  }
-} */
