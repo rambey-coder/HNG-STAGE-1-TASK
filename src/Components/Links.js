@@ -1,6 +1,5 @@
 import React from 'react'
 import Header from './Header'
-import Footer from './Footer'
 import { Link } from 'react-router-dom'
 
 const MainPage = () => {
@@ -23,8 +22,6 @@ const MainPage = () => {
 
           <img src="/assets/github-icon.svg" alt="github" />
       </div>
-
-      <Footer />
       </>
   )
 }
