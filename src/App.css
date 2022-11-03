@@ -269,6 +269,16 @@
   margin: auto;
 }
 
+.contact-container > h1 {
+  color: #101828;
+}
+
+.contact-container > p {
+  font-size: 17px;
+  color: #475467;
+  margin-top: 0;
+}
+
 @media screen and (max-width: 774px) {
   .footer {
     /* display: none; */
