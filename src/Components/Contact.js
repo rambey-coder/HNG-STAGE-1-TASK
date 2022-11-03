@@ -1,39 +1,70 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Contact = () => {
+
+    const [value, setValue] = useState('')
+    const [last, setLast] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        setValue('')
+        setLast('')
+        setEmail('')
+        setMessage('')
+
+        const errMsg = document.querySelector('.err-msg');
+        const textArea = document.querySelector('#message')
+        if (message == '') {
+            errMsg.classList.add('active');
+            textArea.classList.add('active');
+
+            setTimeout(() => {
+                errMsg.classList.remove('active');
+                textArea.classList.remove('active');
+            }, 3000)
+        } else {
+            
+            alert('Form Submitted Success');
+        }
+    }
+
     return (
         <>
             <div className='contact-container'>
                 <h1>Contact Me</h1>
                 <p>Hi there, contact me to ask me about anything you have in mind.</p>
-                <form className="contact">
+                <form className="contact" onSubmit={handleSubmit}>
                     <div className="contact-info">
                         <div>
                             <label>First name</label>
-                            <input type="text" id="first_name" placeholder='First name' />
+                            <input type="text" id="first_name" placeholder='First name' value={value} onChange={(e) => setValue(e.target.value)} />
                         </div>
                         <div>
                             <label>Last name</label>
-                            <input type="text" id="last_name" placeholder='Last name' />
+                            <input type="text" id="last_name" placeholder='Last name' value={last} onChange={(e) => setLast(e.target.value)} />
                         </div>
                     </div>
 
                     <div>
                         <label>Email</label>
-                        <input type="email" id="email" placeholder='yourname@email.com' />
+                        <input type="email" id="email" placeholder='yourname@email.com' value={email} onChange={(e) => setEmail(e.target.value)} />
                     </div>
                     <div>
                         <label>Message</label>
-                        <textarea placeholder="Send me a message and I'll reply you as soon as possible..." id="message"></textarea>
+                        <textarea placeholder="Send me a message and I'll reply you as soon as possible..." id="message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
+                        <p className="err-msg">Please enter a message</p>
                     </div>
 
                     <label className="container">
-                    You agree to providing your data to name who may contact you.
+                        You agree to providing your data to name who may contact you.
                         <input type="checkbox" />
                         <span className="checkmark"></span>
                     </label>
 
-                    <button id='btn_submit'>Send message</button>
+                    <button id='btn__submit'>Send message</button>
                 </form>
             </div>
         </>
