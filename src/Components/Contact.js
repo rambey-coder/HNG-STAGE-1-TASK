@@ -17,7 +17,7 @@ const Contact = () => {
 
         const errMsg = document.querySelector('.err-msg');
         const textArea = document.querySelector('#message')
-        if (message == '') {
+        if (message ==='') {
             errMsg.classList.add('active');
             textArea.classList.add('active');
 
