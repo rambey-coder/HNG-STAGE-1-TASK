@@ -282,7 +282,6 @@
 .contact {
   margin-top: 2rem;
   width: 100%;
-  box-sizing: border-box;
 }
 
 .contact-info {
@@ -303,12 +302,13 @@
   color: #344054;
 }
 
-.contact-info > div, .contact > div {
+.contact-info > div {
   width: 50%;
 }
 
 .contact > input, .contact-info > div > input {
   width: 100%;
+  box-sizing: border-box;
   padding: 10px 20px;
 }
 @media screen and (max-width: 774px) {
