@@ -173,7 +173,7 @@
 }
 
 .footer {
-  margin-top: 8rem;
+  margin-top: 6rem;
   border-top: 1px solid #EAECF0;
   padding: 20px 0;
   display: flex;
@@ -190,6 +190,7 @@
   color: #667085;
   font-size: 14px;
   font-weight: 600;
+  margin: 0;
 }
 
 .error {
@@ -261,11 +262,7 @@
 }
 
 .contact-container {
-  width: 60%;
-  /* height: 67vh; */
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  width: 80%;
   margin: auto;
 }
 
@@ -276,7 +273,7 @@
 }
 
 .contact-container > p {
-  font-size: 15px;
+  font-size: 13px;
   color: #475467;
 }
 
@@ -289,7 +286,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 3rem;
+  gap: 1.5rem;
   margin-bottom: 20px;
   width: 100%;
   box-sizing: border-box;
@@ -341,25 +338,17 @@
   font-size: 13px;
 }
 
-/* .checkbox {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  position: relative;
-} */
-
 .container {
   display: block;
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 13px;
   color: #475467;
   user-select: none;
 }
 
-/* Hide the browser's default checkbox */
 .container input {
   position: absolute;
   opacity: 0;
@@ -368,7 +357,6 @@
   width: 0;
 }
 
-/* Create a custom checkbox */
 .checkmark {
   position: absolute;
   top: 0;
@@ -380,27 +368,22 @@
   border-radius: 5px;
 }
 
-
-/* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
   background-color: transparent;
   border-color: #1570EF;
   transition: all 0.5s ease;
 }
 
-/* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* Show the checkmark when checked */
 .container input:checked ~ .checkmark:after {
   display: block;
 }
 
-/* Style the checkmark/indicator */
 .container .checkmark:after {
   left: 6px;
   top: 2px;
@@ -462,4 +445,23 @@
   .error-link > a:nth-child(1) {
     justify-content: center;
   }  
+
+  .contact-info {
+    flex-direction: column;
+  }
+
+  .contact-info > div {
+    width: 100%;
+  }
+
+  .contact-container {
+    width: 100%;
+  }
+
 }
+
+/* @media screen and (max-width: 584px) {
+  .contact-container {
+    width: 75%;
+  }
+} */
