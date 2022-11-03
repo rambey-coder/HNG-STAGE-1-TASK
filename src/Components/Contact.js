@@ -1,9 +1,12 @@
 import React from 'react'
-
+import Footer from './Footer'
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <>
+        <div>Contact</div>
+        <Footer />
+    </>
   )
 }
 
