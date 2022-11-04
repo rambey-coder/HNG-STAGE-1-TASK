@@ -17,14 +17,14 @@ const Contact = () => {
 
         const errMsg = document.querySelector('.err-msg');
         const textArea = document.querySelector('#message')
-        if (message ==='') {
+        if (message === '') {
             errMsg.classList.add('active');
             textArea.classList.add('active');
 
             setTimeout(() => {
                 errMsg.classList.remove('active');
                 textArea.classList.remove('active');
-            }, 3000)
+            }, 4000)
         } else {
             
             alert('Form Submitted Success');
