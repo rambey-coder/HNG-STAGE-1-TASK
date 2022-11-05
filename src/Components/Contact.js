@@ -6,6 +6,7 @@ const Contact = () => {
     const [last, setLast] = useState('')
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
+    const [err, setErr] = useState(false)
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -15,20 +16,15 @@ const Contact = () => {
         setEmail('')
         setMessage('')
 
-        const errMsg = document.querySelector('.err-msg');
-        const textArea = document.querySelector('#message')
         if (message === '') {
-            errMsg.classList.add('active');
-            textArea.classList.add('active');
-
+            setErr(true)
             setTimeout(() => {
-                errMsg.classList.remove('active');
-                textArea.classList.remove('active');
+                setErr(false)
             }, 4000)
         } else {
-            
             alert('Form Submitted Success');
         }
+
     }
 
     return (
@@ -54,9 +50,14 @@ const Contact = () => {
                     </div>
                     <div>
                         <label>Message</label>
+                        <textarea placeholder="Send me a message and I'll reply you as soon as possible..." id="message" className={err ? 'message active' : 'message'} value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
+                        <p className={err ? "err-msg active" : "err-msg"}>Please enter a message</p>
+                    </div>
+                    {/* <div>
+                        <label>Message</label>
                         <textarea placeholder="Send me a message and I'll reply you as soon as possible..." id="message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
                         <p className="err-msg">Please enter a message</p>
-                    </div>
+                    </div> */}
 
                     <label className="container">
                         You agree to providing your data to name who may contact you.

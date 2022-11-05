@@ -319,7 +319,7 @@
   transition: all 0.5s ease;
 } 
 
-.contact > div:nth-child(3) > textarea:focus {
+.message:focus {
   border-color: #84CAFF;
   transition: all 0.5s ease;
   box-shadow: 0 0 0 4px rgb(209, 233, 255);
@@ -341,15 +341,15 @@
   margin-top: 0;
 }
 
-.contact > div:nth-child(3) > textarea.active {
+.message.active {
   border-color: #F89687;
 }
 
-.contact > div:nth-child(3) > textarea:focus.active {
+.message:focus.active {
   box-shadow: 0 0 0 4px rgb(255, 211, 204);
 }
 
-.contact > div:nth-child(3) > textarea {
+.message {
   width: 100%;
   resize: none;
   height: 130px;
