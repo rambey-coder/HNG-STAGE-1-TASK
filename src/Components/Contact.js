@@ -52,7 +52,7 @@ const Contact = () => {
                         <p className={err ? "err-msg active" : "err-msg"}>Please enter your Email</p>
                     </div>
                     <div>
-                        <label>Message</label>
+                        <label htmlFor='message'>Message</label>
                         <textarea placeholder="Send me a message and I'll reply you as soon as possible..." id="message" className={err ? 'message active' : 'message'} value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
                         <p className={err ? "err-msg active" : "err-msg"}>Please enter a message</p>
                     </div>
