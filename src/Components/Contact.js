@@ -16,7 +16,7 @@ const Contact = () => {
         setEmail('')
         setMessage('')
 
-        if (message === '') {
+        if (message === '' || value === '' || last === '' || email === '') {
             setErr(true)
             setTimeout(() => {
                 setErr(false)
@@ -36,17 +36,20 @@ const Contact = () => {
                     <div className="contact-info">
                         <div>
                             <label htmlFor='first_name'>First name</label>
-                            <input type="text" id="first_name" placeholder='First name' value={value} onChange={(e) => setValue(e.target.value)} />
+                            <input type="text" id="first_name" placeholder='First name' value={value} onChange={(e) => setValue(e.target.value)} className={err ? 'inpts active' : 'inpts'} />
+                            <p className={err ? "err-msg active" : "err-msg"}>Please enter your first name</p>
                         </div>
                         <div>
                             <label htmlFor='last_name'>Last name</label>
-                            <input type="text" id="last_name" placeholder='Last name' value={last} onChange={(e) => setLast(e.target.value)} />
+                            <input type="text" id="last_name" placeholder='Last name' value={last} onChange={(e) => setLast(e.target.value)} className={err ? ' inpts active' : 'inpts'} />
+                            <p className={err ? "err-msg active" : "err-msg"}>Please enter your last name</p>
                         </div>
                     </div>
 
                     <div>
                         <label htmlFor='email'>Email</label>
-                        <input type="email" id="email" placeholder='yourname@email.com' value={email} onChange={(e) => setEmail(e.target.value)} />
+                        <input type="email" id="email" placeholder='yourname@email.com' value={email} onChange={(e) => setEmail(e.target.value)} className={err ? 'inpts active' : 'inpts'} />
+                        <p className={err ? "err-msg active" : "err-msg"}>Please enter your Email</p>
                     </div>
                     <div>
                         <label>Message</label>

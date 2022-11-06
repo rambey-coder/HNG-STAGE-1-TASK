@@ -304,7 +304,7 @@
   width: 50%;
 }
 
-.contact div > input, .contact-info > div > input {
+.contact div > input, .inpts {
   width: 100%;
   box-sizing: border-box;
   padding: 12px 15px;
@@ -314,7 +314,7 @@
   border: 1px solid #D0D5DD;
 }
 
-.contact div > input:focus, .contact-info > div > input:focus {
+.contact div > input:focus, .inpts:focus {
   border-color: #84CAFF;
   transition: all 0.5s ease;
 } 
@@ -341,7 +341,7 @@
   margin-top: 0;
 }
 
-.message.active {
+.message.active, .inpts.active {
   border-color: #F89687;
 }
 
