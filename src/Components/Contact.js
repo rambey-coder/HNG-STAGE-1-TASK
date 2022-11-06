@@ -35,17 +35,17 @@ const Contact = () => {
                 <form className="contact" onSubmit={handleSubmit}>
                     <div className="contact-info">
                         <div>
-                            <label>First name</label>
+                            <label htmlFor='first_name'>First name</label>
                             <input type="text" id="first_name" placeholder='First name' value={value} onChange={(e) => setValue(e.target.value)} />
                         </div>
                         <div>
-                            <label>Last name</label>
+                            <label htmlFor='last_name'>Last name</label>
                             <input type="text" id="last_name" placeholder='Last name' value={last} onChange={(e) => setLast(e.target.value)} />
                         </div>
                     </div>
 
                     <div>
-                        <label>Email</label>
+                        <label htmlFor='email'>Email</label>
                         <input type="email" id="email" placeholder='yourname@email.com' value={email} onChange={(e) => setEmail(e.target.value)} />
                     </div>
                     <div>
@@ -53,11 +53,6 @@ const Contact = () => {
                         <textarea placeholder="Send me a message and I'll reply you as soon as possible..." id="message" className={err ? 'message active' : 'message'} value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
                         <p className={err ? "err-msg active" : "err-msg"}>Please enter a message</p>
                     </div>
-                    {/* <div>
-                        <label>Message</label>
-                        <textarea placeholder="Send me a message and I'll reply you as soon as possible..." id="message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
-                        <p className="err-msg">Please enter a message</p>
-                    </div> */}
 
                     <label className="container">
                         You agree to providing your data to name who may contact you.
