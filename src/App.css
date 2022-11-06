@@ -341,7 +341,7 @@
   margin-top: 0;
 }
 
-.message.active, .inpts.active {
+.message.active {
   border-color: #F89687;
 }
 

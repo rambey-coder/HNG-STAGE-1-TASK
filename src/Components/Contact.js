@@ -11,17 +11,18 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        setValue('')
-        setLast('')
-        setEmail('')
-        setMessage('')
+        
 
-        if (message === '' || value === '' || last === '' || email === '') {
+        if (message === '') {
             setErr(true)
             setTimeout(() => {
                 setErr(false)
             }, 4000)
         } else {
+            setValue('')
+            setLast('')
+            setEmail('')
+            setMessage('')
             alert('Form Submitted Success');
         }
 
@@ -36,20 +37,17 @@ const Contact = () => {
                     <div className="contact-info">
                         <div>
                             <label htmlFor='first_name'>First name</label>
-                            <input type="text" id="first_name" placeholder='First name' value={value} onChange={(e) => setValue(e.target.value)} className={err ? 'inpts active' : 'inpts'} />
-                            <p className={err ? "err-msg active" : "err-msg"}>Please enter your first name</p>
+                            <input type="text" id="first_name" placeholder='First name' value={value} onChange={(e) => setValue(e.target.value)}/>
                         </div>
                         <div>
                             <label htmlFor='last_name'>Last name</label>
-                            <input type="text" id="last_name" placeholder='Last name' value={last} onChange={(e) => setLast(e.target.value)} className={err ? ' inpts active' : 'inpts'} />
-                            <p className={err ? "err-msg active" : "err-msg"}>Please enter your last name</p>
+                            <input type="text" id="last_name" placeholder='Last name' value={last} onChange={(e) => setLast(e.target.value)}/>
                         </div>
                     </div>
 
                     <div>
                         <label htmlFor='email'>Email</label>
-                        <input type="email" id="email" placeholder='yourname@email.com' value={email} onChange={(e) => setEmail(e.target.value)} className={err ? 'inpts active' : 'inpts'} />
-                        <p className={err ? "err-msg active" : "err-msg"}>Please enter your Email</p>
+                        <input type="email" id="email" placeholder='yourname@email.com' value={email} onChange={(e) => setEmail(e.target.value)}  />
                     </div>
                     <div>
                         <label htmlFor='message'>Message</label>
