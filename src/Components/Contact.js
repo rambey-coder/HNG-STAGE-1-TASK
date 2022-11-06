@@ -8,6 +8,8 @@ const Contact = () => {
     const [message, setMessage] = useState('')
     const [err, setErr] = useState(false)
 
+    const name = 'Rambey'
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -56,8 +58,8 @@ const Contact = () => {
                     </div>
 
                     <label className="container">
-                        You agree to providing your data to name who may contact you.
-                        <input type="checkbox" />
+                        You agree to providing your data to {name} who may contact you.
+                        <input type="checkbox" id='checkmark' />
                         <span className="checkmark"></span>
                     </label>
 
